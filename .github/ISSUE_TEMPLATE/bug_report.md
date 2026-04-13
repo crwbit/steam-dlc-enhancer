@@ -1,6 +1,6 @@
 ---
 name: Bug Report
-about: Create a report to help us improve the enhancer.
+about: Create a report to help us improve.
 title: "[BUG] Brief description of the issue"
 labels: bug
 assignees: ''
