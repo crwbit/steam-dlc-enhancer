@@ -1,38 +1,27 @@
 ---
-name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
+name: Bug Report
+about: Create a report to help us improve the enhancer.
+title: "[BUG] Brief description of the issue"
+labels: bug
 assignees: ''
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+**Observed Behavior**
+A clear and concise description of what the error is.
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+**Reproduction Steps**
+1. Navigate to Steam App URL: [e.g., https://store.steampowered.com/app/281990/Stellaris/]
+2. Interact with the Dashboard: [e.g., Set filter to 'Unowned']
+3. Observe Error: [e.g., Row X remains visible despite being owned]
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+**Technical Environment**
+- Browser: [e.g. Chrome, Edge]
+- Extension Version: v2.0
+- Language/Region: [e.g. USD / United States]
 
 **Screenshots**
-If applicable, add screenshots to help explain your problem.
+If applicable, attach screenshots to help explain the UI failure.
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
-
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
-
-**Additional context**
+**Additional Context**
 Add any other context about the problem here.
