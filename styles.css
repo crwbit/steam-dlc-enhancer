@@ -1,0 +1,152 @@
+/* ============================================================
+   Steam DLC Enhancer — styles.css
+   ============================================================ */
+
+/* ── Base ─────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+.game_area_dlc_row {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif !important;
+}
+
+/* ── DLC Rows ─────────────────────────────────────────────── */
+.game_area_dlc_row {
+  display: flex;
+  align-items: center;
+  padding: 2px 6px !important;
+  margin-bottom: 1px !important;
+  background: rgba(0, 0, 0, 0.18) !important;
+  border-radius: 3px;
+  transition: background 0.15s ease, opacity 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.game_area_dlc_row:hover {
+  background: rgba(103, 193, 245, 0.06) !important;
+}
+
+.game_area_dlc_row:focus-within {
+  outline: 2px solid #67c1f5;
+  outline-offset: -2px;
+}
+
+.game_area_dlc_row.ds_owned {
+  background: rgba(103, 193, 245, 0.07) !important;
+  border-left: 3px solid #67c1f5;
+}
+
+/* Discounted but unowned — subtle green left border */
+.game_area_dlc_row:not(.ds_owned) .discount_pct {
+  border-left: none; /* handled by row below */
+}
+
+/* ── Dashboard Container ──────────────────────────────────── */
+#dlc_dashboard {
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(103, 193, 245, 0.12);
+  padding: 7px 10px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* ── Stats Row ────────────────────────────────────────────── */
+.dlc_stats_row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.dlc_stat {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+/* ── Progress Bar ─────────────────────────────────────────── */
+#dlc_enhancer_progress {
+  background: rgba(255, 255, 255, 0.07);
+  height: 4px;
+  border-radius: 2px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+#dlc_enhancer_bar {
+  background: linear-gradient(90deg, #4a9ec4, #67c1f5);
+  height: 100%;
+  width: 0%;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 2px;
+}
+
+/* ── Controls Row — single line ───────────────────────────── */
+.dlc_controls_row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-wrap: nowrap;   /* SINGLE ROW — overflow clips gracefully */
+  min-width: 0;
+}
+
+/* ── Shared input / select styles ─────────────────────────── */
+.dlc_input,
+.dlc_select {
+  background: #1b2838;
+  color: #c6d4df;
+  border: 1px solid #2a475e;
+  padding: 3px 7px;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: 11px;
+  outline: none;
+  transition: border-color 0.15s;
+  height: 24px;
+  min-width: 0;
+}
+
+.dlc_input:focus,
+.dlc_select:focus {
+  border-color: #67c1f5;
+}
+
+/* Search grows to fill space */
+.dlc_search {
+  flex: 1 1 90px;
+  min-width: 70px;
+}
+
+/* Selects shrink but not below label width */
+.dlc_select {
+  flex: 0 1 auto;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5'%3E%3Cpath d='M0 0l4 5 4-5z' fill='%2367c1f5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 6px center;
+  padding-right: 20px;
+}
+
+/* ── No Results Placeholder ───────────────────────────────── */
+.dlc_no_results {
+  text-align: center;
+  color: #4c6174;
+  font-size: 12px;
+  padding: 16px 0;
+  font-style: italic;
+}
+
+/* ── Colour Tokens ────────────────────────────────────────── */
+.text-blue   { color: #67c1f5; }
+.text-green  { color: #A4D007; }
+.text-orange { color: #e8a838; }

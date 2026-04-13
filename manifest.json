@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Steam DLC Enhancer",
+  "version": "1.0",
+  "description": "Enhances Steam DLC pages with search, smart filters, sorting, collection stats, savings calculator, and i18n (EN/DE).",
+  "default_locale": "en",
+  "content_scripts": [
+    {
+      "matches": ["https://store.steampowered.com/app/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
